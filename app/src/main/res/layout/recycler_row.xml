@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:background="#EAEAEA"
         android:text="Test"
-        android:textColor="@color/purple_700"
-        android:textSize="26sp">
+        android:textColor="@color/darkThemeColor"
+        android:textSize="50sp">
 
     </TextView>
 

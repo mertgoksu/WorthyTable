@@ -1,11 +1,13 @@
 package com.mertg.worthytable;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import com.mertg.worthytable.databinding.ActivityDetailsBinding;
 import com.mertg.worthytable.databinding.ActivityShowResultBinding;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ShowResultActivity extends AppCompatActivity {
     private ActivityShowResultBinding binding;
@@ -27,6 +30,8 @@ public class ShowResultActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(this, R.color.darkThemeColor)));
+        binding.button.setBackgroundColor(ContextCompat.getColor(this,R.color.darkThemeColor));
 
         database = this.openOrCreateDatabase("Companies", MODE_PRIVATE, null);
 
